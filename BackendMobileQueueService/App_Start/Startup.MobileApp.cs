@@ -53,15 +53,15 @@ namespace BackendMobileQueueService
     {
         protected override void Seed(BackendMobileQueueContext context)
         {
-            List<TodoItem> todoItems = new List<TodoItem>
+            List<PostOffice> todoItems = new List<PostOffice>
             {
-                new TodoItem { Id = Guid.NewGuid().ToString(), Text = "First item", Complete = false },
-                new TodoItem { Id = Guid.NewGuid().ToString(), Text = "Second item", Complete = false },
+                new PostOffice { Id = Guid.NewGuid().ToString(), City = "Kraków", OpeningHours =  "08:00-20:00",Street="Bronowicka",PostalCode="30-091",Url=string.Empty},
+                new PostOffice { Id = Guid.NewGuid().ToString(), City = "Koszarawa", OpeningHours =  "07:00-15:00",Street="Koszarawa",PostalCode="34-332",Url=string.Empty},
             };
 
-            foreach (TodoItem todoItem in todoItems)
+            foreach (PostOffice todoItem in todoItems)
             {
-                context.Set<TodoItem>().Add(todoItem);
+                context.Set<PostOffice>().Add(todoItem);
             }
 
             base.Seed(context);
