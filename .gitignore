@@ -26,7 +26,12 @@ bld/
 [Bb]in/
 [Oo]bj/
 packages/
-
+.vs/
 # MSTest test Results
 [Tt]est[Rr]esult*/
+<<<<<<< HEAD
 [Bb]uild[Ll]og.*
+=======
+[Bb]uild[Ll]og.*
+
+>>>>>>> ed318df... remove .vs
