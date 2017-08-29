@@ -9,6 +9,7 @@ using Microsoft.Azure.Mobile.Server.Config;
 using BackendMobileQueueService.DataObjects;
 using BackendMobileQueueService.Models;
 using Owin;
+using System.Linq;
 
 namespace BackendMobileQueueService
 {
@@ -26,10 +27,10 @@ namespace BackendMobileQueueService
                 .ApplyTo(config);
 
             // Use Entity Framework Code First to create database tables based on your DbContext
-            Database.SetInitializer(new BackendMobileQueueInitializer());
+            //Database.SetInitializer(new BackendMobileQueueInitializer());
 
             // To prevent Entity Framework from modifying your database schema, use a null database initializer
-            // Database.SetInitializer<BackendMobileQueueContext>(null);
+            Database.SetInitializer<BackendMobileQueueContext>(null);
 
             MobileAppSettingsDictionary settings = config.GetMobileAppSettingsProvider().GetMobileAppSettings();
 
@@ -53,6 +54,10 @@ namespace BackendMobileQueueService
     {
         protected override void Seed(BackendMobileQueueContext context)
         {
+            if (context.PostOffices.Any())
+            {
+                return;
+            }
             List<PostOffice> todoItems = new List<PostOffice>
             {
                 new PostOffice { Id = Guid.NewGuid().ToString(), City = "Kraków", OpeningHours =  "08:00-20:00",Street="Bronowicka",PostalCode="30-091",State="Małopolskie" ,Url=string.Empty},

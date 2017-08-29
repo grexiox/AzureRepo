@@ -22,7 +22,7 @@ namespace BackendMobileQueueService.Models
         {
         } 
 
-        public DbSet<PostOffice> TodoItems { get; set; }
+        public DbSet<PostOffice> PostOffices { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
