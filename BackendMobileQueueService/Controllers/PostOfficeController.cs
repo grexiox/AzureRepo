@@ -9,7 +9,7 @@ using BackendMobileQueueService.Models;
 
 namespace BackendMobileQueueService.Controllers
 {
-    public class PostOffceController : TableController<PostOffice>
+    public class PostOfficeController : TableController<PostOffice>
     {
         protected override void Initialize(HttpControllerContext controllerContext)
         {
