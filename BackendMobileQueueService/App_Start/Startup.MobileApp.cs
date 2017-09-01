@@ -60,8 +60,8 @@ namespace BackendMobileQueueService
             }
             List<PostOffice> todoItems = new List<PostOffice>
             {
-                new PostOffice { Id = Guid.NewGuid().ToString(), City = "Kraków", OpeningHours =  "08:00-20:00",Street="Bronowicka",PostalCode="30-091",State=new State(){StateName="Małopolskie" } ,Url=string.Empty},
-                new PostOffice { Id = Guid.NewGuid().ToString(), City = "Koszarawa", OpeningHours =  "07:00-15:00",Street="Koszarawa",PostalCode="34-332",State=new State(){StateName="Śląskie" },Url=string.Empty},
+                new PostOffice { Id = Guid.NewGuid().ToString(), City = "Kraków", OpeningHours =  "08:00-20:00",Street="Bronowicka",PostalCode="30-091",State="Małopolskie" ,Url=string.Empty},
+                new PostOffice { Id = Guid.NewGuid().ToString(), City = "Koszarawa", OpeningHours =  "07:00-15:00",Street="Koszarawa",PostalCode="34-332",State="Śląskie",Url=string.Empty},
             };
 
             foreach (PostOffice todoItem in todoItems)
