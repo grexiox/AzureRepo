@@ -19,32 +19,32 @@ namespace BackendMobileQueueService.Controllers
         }
 
         // GET tables/PostOffice
-        public IQueryable<PostOffice> GetAllTodoItems()
+        public IQueryable<PostOffice> GetAllPostOffices()
         {
             return Query();
         }
 
         // GET tables/PostOffice/48D68C86-6EA6-4C25-AA33-223FC9A27959
-        public SingleResult<PostOffice> GetTodoItem(string id)
+        public SingleResult<PostOffice> GetPostOffice(string id)
         {
             return Lookup(id);
         }
 
         // PATCH tables/PostOffice/48D68C86-6EA6-4C25-AA33-223FC9A27959
-        public Task<PostOffice> PatchTodoItem(string id, Delta<PostOffice> patch)
+        public Task<PostOffice> PatchPostOffice(string id, Delta<PostOffice> patch)
         {
             return UpdateAsync(id, patch);
         }
 
         // POST tables/PostOffice
-        public async Task<IHttpActionResult> PostTodoItem(PostOffice item)
+        public async Task<IHttpActionResult> PostOffice(PostOffice item)
         {
             PostOffice current = await InsertAsync(item);
             return CreatedAtRoute("Tables", new { id = current.Id }, current);
         }
 
         // DELETE tables/PostOffice/48D68C86-6EA6-4C25-AA33-223FC9A27959
-        public Task DeleteTodoItem(string id)
+        public Task DeletePostOffice(string id)
         {
             return DeleteAsync(id);
         }
