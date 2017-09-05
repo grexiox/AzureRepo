@@ -150,6 +150,7 @@
     <Compile Include="Controllers\PostOfficeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="DataObjects\PostOffice.cs" />
+    <Compile Include="Filters\ApplicationKeyAttribute.cs" />
     <Compile Include="Helpers\ExpandPropertyAttribute.cs" />
     <Compile Include="Models\BackendMobileQueueContext.cs" />
     <Compile Include="Startup.cs" />

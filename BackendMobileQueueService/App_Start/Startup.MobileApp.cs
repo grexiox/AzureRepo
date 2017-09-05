@@ -10,6 +10,7 @@ using BackendMobileQueueService.DataObjects;
 using BackendMobileQueueService.Models;
 using Owin;
 using System.Linq;
+using BackendMobileQueueService.Filters;
 
 namespace BackendMobileQueueService
 {
@@ -19,6 +20,7 @@ namespace BackendMobileQueueService
         {
             HttpConfiguration config = new HttpConfiguration();
 
+            config.Filters.Add(new ApplicationKeyAttribute());
             //For more information on Web API tracing, see http://go.microsoft.com/fwlink/?LinkId=620686 
             config.EnableSystemDiagnosticsTracing();
 
