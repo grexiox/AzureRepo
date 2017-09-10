@@ -25,9 +25,10 @@ namespace BackendMobileQueueService.Controllers
             {
                 var ret = Error("DefaultValue");
                 var parameters = ControllerContext.Request.GetQueryNameValuePairs();
-                if (parameters.Count() == 1)
+                var param = parameters.Where(kv => kv.Key == "PostId").ToList();
+                if (param.Count==1)
                 {
-                    var PostId = parameters.First().Value;
+                    var PostId = param.First().Value;
                     if (!string.IsNullOrWhiteSpace(PostId))
                     {
                         var PostOfice = context.Values.FirstOrDefault(v => v.Id == PostId);
