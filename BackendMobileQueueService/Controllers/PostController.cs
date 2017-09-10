@@ -41,10 +41,6 @@ namespace BackendMobileQueueService.Controllers
                             ret = Error("Search value");
                         }
                     }
-                    else
-                    {
-                        ret = Error("Parameters value");
-                    }
                 }
                 else
                 {
