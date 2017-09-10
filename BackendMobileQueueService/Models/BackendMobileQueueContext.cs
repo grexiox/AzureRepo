@@ -23,6 +23,7 @@ namespace BackendMobileQueueService.Models
         } 
 
         public DbSet<PostOffice> PostOffices { get; set; }
+        public DbSet<Value> Values { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

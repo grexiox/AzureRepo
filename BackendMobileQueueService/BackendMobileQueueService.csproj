@@ -147,9 +147,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\Startup.MobileApp.cs" />
+    <Compile Include="Controllers\PostController.cs" />
     <Compile Include="Controllers\PostOfficeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="DataObjects\JsonObject\PostValue.cs" />
     <Compile Include="DataObjects\PostOffice.cs" />
+    <Compile Include="DataObjects\Value.cs" />
     <Compile Include="Filters\ApplicationKeyAttribute.cs" />
     <Compile Include="Helpers\ExpandPropertyAttribute.cs" />
     <Compile Include="Models\BackendMobileQueueContext.cs" />

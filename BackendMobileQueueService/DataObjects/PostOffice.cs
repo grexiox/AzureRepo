@@ -11,6 +11,6 @@ namespace BackendMobileQueueService.DataObjects
         public string Street { get; set; }
         public string OpeningHours { get; set; }
         public string City { get; set; }
-        public string Url { get; set; }
+        public bool IsAvailable { get; set; }
     }
 }
