@@ -16,7 +16,7 @@ namespace DbAccess
         // For more information refer to the documentation:
         // http://msdn.microsoft.com/en-us/data/jj591621.aspx
 
-        private static readonly string connectionStringName = CloudConfigurationManager.GetSetting("MS_TableConnectionString");
+        private const string connectionStringName = "Name=MS_TableConnectionString";
 
         public BackendMobileQueueContext() : base(connectionStringName)
         {
