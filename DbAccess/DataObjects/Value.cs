@@ -1,6 +1,7 @@
-﻿using Microsoft.Azure.Mobile.Server;
+﻿
+using Microsoft.Azure.Mobile.Server;
 
-namespace BackendMobileQueueService.DataObjects
+namespace DbAccess.DataObjects
 {
     public class Value : EntityData
     {

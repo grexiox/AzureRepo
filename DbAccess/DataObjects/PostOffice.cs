@@ -1,6 +1,6 @@
 ﻿using Microsoft.Azure.Mobile.Server;
 
-namespace BackendMobileQueueService.DataObjects
+namespace DbAccess.DataObjects
 {
     public class PostOffice : EntityData
     {

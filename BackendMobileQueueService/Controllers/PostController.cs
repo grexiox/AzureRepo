@@ -1,12 +1,12 @@
 ﻿using BackendMobileQueueService.DataObjects.JsonObject;
-using BackendMobileQueueService.Models;
 using Microsoft.Azure.Mobile.Server.Config;
 using System.Linq;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Controllers;
-using BackendMobileQueueService.DataObjects;
 using System;
+using DbAccess;
+using DbAccess.DataObjects;
 
 namespace BackendMobileQueueService.Controllers
 {

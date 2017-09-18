@@ -4,8 +4,8 @@ using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.OData;
 using Microsoft.Azure.Mobile.Server;
-using BackendMobileQueueService.DataObjects;
-using BackendMobileQueueService.Models;
+using DbAccess.DataObjects;
+using DbAccess;
 
 namespace BackendMobileQueueService.Controllers
 {

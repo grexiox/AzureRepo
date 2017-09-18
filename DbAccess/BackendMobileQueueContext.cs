@@ -1,11 +1,11 @@
 ﻿using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
-using Microsoft.Azure.Mobile.Server;
 using Microsoft.Azure.Mobile.Server.Tables;
-using BackendMobileQueueService.DataObjects;
+using Microsoft.Azure;
+using DbAccess.DataObjects;
 
-namespace BackendMobileQueueService.Models
+namespace DbAccess
 {
     public class BackendMobileQueueContext : DbContext
     {
@@ -16,7 +16,7 @@ namespace BackendMobileQueueService.Models
         // For more information refer to the documentation:
         // http://msdn.microsoft.com/en-us/data/jj591621.aspx
 
-        private const string connectionStringName = "Name=MS_TableConnectionString";
+        private static readonly string connectionStringName = CloudConfigurationManager.GetSetting("MS_TableConnectionString");
 
         public BackendMobileQueueContext() : base(connectionStringName)
         {

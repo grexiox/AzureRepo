@@ -6,11 +6,11 @@ using System.Web.Http;
 using Microsoft.Azure.Mobile.Server;
 using Microsoft.Azure.Mobile.Server.Authentication;
 using Microsoft.Azure.Mobile.Server.Config;
-using BackendMobileQueueService.DataObjects;
-using BackendMobileQueueService.Models;
 using Owin;
 using System.Linq;
 using BackendMobileQueueService.Filters;
+using DbAccess;
+using DbAccess.DataObjects;
 
 namespace BackendMobileQueueService
 {
